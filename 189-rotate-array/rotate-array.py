@@ -1,12 +1,13 @@
-
-class Solution:
-    def rotate(self, nums: List[int], k: int) -> None:
-        for _ in range(k):
-            nums.insert(0,nums.pop())
-
-
-        
+from collections import deque
+class Solution(object):
+    def rotate(self, nums, k):
+        d=deque(nums)
+        d.rotate(k)
+        nums[:]=list(d)
+      
         """
-        Do not return anything, modify nums in-place instead.
+        :type nums: List[int]
+        :type k: int
+        :rtype: None Do not return anything, modify nums in-place instead.
         """
         
