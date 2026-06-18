@@ -4,7 +4,7 @@ class Solution:
         r=x
       
         while(l<=r):
-            mid=int((l+r)/2)
+            mid=(l+r)//2
             if mid*mid==x:
                 return mid
             elif mid*mid>x:
